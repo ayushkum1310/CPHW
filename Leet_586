@@ -1,0 +1,7 @@
+import pandas as pd
+
+def largest_orders(orders: pd.DataFrame) -> pd.DataFrame:
+    mod=orders['customer_number'].mode()
+    mod.columns=["customer_number"]
+    new=pd.DataFrame(mod)
+    return new
